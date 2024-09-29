@@ -1,0 +1,90 @@
+.landing-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header-left h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-right .nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    padding: 0 10px;
+    list-style: none;
+    text-decoration: none;
+  }
+}
+
+.header-right button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #fff;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.register-btn {
+  background-color: #008cba;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+main {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.content h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.content li {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
