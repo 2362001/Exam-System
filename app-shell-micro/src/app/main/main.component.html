@@ -1,1 +1,17 @@
-<p>main works!</p>
+<h1>Test micro</h1>
+<div>
+  <ng-container #comp *ngFor="let item of loaders" [ngSwitch]="item.framework">
+    <app-react-wrapper
+      *ngSwitchCase="'react'"
+      [component]="item.component"
+    ></app-react-wrapper>
+    <!-- <app-vue-wrapper
+      *ngSwitchCase="'vue'"
+      [component]="item.component"
+    ></app-vue-wrapper>
+    <app-angular-wrapper
+      *ngSwitchDefault
+      [component]="item.component"
+    ></app-angular-wrapper> -->
+  </ng-container>
+</div>
