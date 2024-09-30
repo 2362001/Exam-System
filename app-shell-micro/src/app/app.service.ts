@@ -10,7 +10,7 @@ const users = [
 
 const remoteModules = [
   {
-    remoteEntry: 'http://localhost:3002/remoteEntry.js',
+    remoteEntry: 'http://localhost:3003/remoteEntry.js',
     remoteName: 'react_mfe_app',
     exposedModule: 'ReactAppLoader',
   },
