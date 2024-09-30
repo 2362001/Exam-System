@@ -13,7 +13,7 @@ export default defineConfig({
   tools: {
     rspack: {
       output: {
-        uniqueName: "react_mfe_app", 
+        uniqueName: "react_mfe_app", // cái này phải unique cho mỗi mfe nhé
       },
       plugins: [
         new ModuleFederationPlugin({

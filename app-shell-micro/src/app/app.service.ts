@@ -10,19 +10,9 @@ const users = [
 
 const remoteModules = [
   {
-    remoteEntry: 'http://localhost:3001/remoteEntry.js',
-    remoteName: 'angular_mfe_app',
-    exposedModule: 'AngularAppLoader',
-  },
-  {
-    remoteEntry: 'http://localhost:5173/remoteEntry.js',
+    remoteEntry: 'http://localhost:3002/remoteEntry.js',
     remoteName: 'react_mfe_app',
     exposedModule: 'ReactAppLoader',
-  },
-  {
-    remoteEntry: 'vite:http://localhost:3003/assets/remoteEntry.js',
-    remoteName: 'vue_mfe_app',
-    exposedModule: 'VueAppLoader',
   },
 ];
 
@@ -34,7 +24,9 @@ const remoteModules = [
 export class AppService {
   loggedUser: { username: string; password: string } | null = null;
   authorized_modules: typeof remoteModules = [];
-
+  constructor() {
+    this.authorized_modules = remoteModules;
+  }
   login(username: string, password: string) {
     const user = users.find(
       (item) => item.username === username && item.password === password
@@ -44,7 +36,7 @@ export class AppService {
 
     this.loggedUser = user;
 
-    this.authorized_modules = remoteModules; // all modules
+    // this.authorized_modules = remoteModules;
 
     return true;
   }

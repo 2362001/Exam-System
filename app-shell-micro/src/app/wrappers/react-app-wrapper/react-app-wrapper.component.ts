@@ -14,6 +14,8 @@ export class ReactAppWrapperComponent {
   constructor(private readonly host: ElementRef) {}
 
   ngAfterViewInit() {
+    console.log(123);
+
     this.root = createRoot(this.host.nativeElement);
     this.root.render(createElement(this.component));
   }

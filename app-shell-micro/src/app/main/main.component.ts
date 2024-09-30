@@ -14,6 +14,7 @@ export class MainComponent {
   async ngAfterViewInit() {
     for (const m of this.appService.authorized_modules) {
       loadRemoteModule(m).then((module) => {
+
         if (module.default) {
           this.loaders.push(module.default);
         } else {

@@ -14,9 +14,12 @@ const moduleMap: Record<string, any> = {};
 function loadRemoteEntry(remoteEntry: string): Promise<void> {
   return new Promise<void>((resolve, reject) => {
     if (moduleMap[remoteEntry]) {
+      console.log(123);
+
       resolve();
       return;
     }
+    console.log(123);
 
     const script = document.createElement('script');
     script.src = remoteEntry;
